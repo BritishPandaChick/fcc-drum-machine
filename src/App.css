@@ -1,17 +1,38 @@
-#display{
-  height: 25vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 75;
+/* Header */
+header {
+  height: 300px;
+  padding: 20px 0;
+}
+
+header h1 {
+  font-size: 45px;
+  padding-bottom: 10px;
+}
+
+header h2 {
+  font-size: 35px;
+  padding-bottom: 15px;
+}
+
+header p {
+  font-size: 20px;
+}
+
+/* App styles */
+#display {
+  border: 2px solid #333;
+  width: 100%;
+  padding: 80px 0;
+  font-size: 25px;
+  text-align: center;
+  color: #333;
 }
 
 #drum-pads {
-  height: 75vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-top: 15px;
+  padding-left: 15px;
 }
 
 .drum-pad {

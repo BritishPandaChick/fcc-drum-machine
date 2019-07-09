@@ -2,16 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './App.css';
 
-const data = [
-  { id: 'chimes', letter: 'Q', src: 'http://www.codemist.co.uk/AmsterdamCatalog/02/02_01_4.wav' },
-  { id: 'bells', letter: 'W', src:'http://orteil.dashnet.org/cookieclicker/snd/jingle.mp3' },
-  { id: 'santa', letter: 'E', src: 'https://cdn.instructables.com/ORIG/FGK/19YK/IHUUE8SE/FGK19YKIHUUE8SE.mp3' },
+const sounds = [
+  { id: 'bells', letter: 'Q', src: 'http://dight310.byu.edu/media/audio/FreeLoops.com/2/2/Christmas%20Bells%20Loop-18474-Free-Loops.com.mp3' },
+  { id: 'santa', letter: 'W', src:'http://thecyberbuddy.com/sounds/ho-ho-ho.wav' },
+  { id: 'sleigh bells', letter: 'E', src: 'http://sfxcontent.s3.amazonaws.com/soundfx/SleighBells3.mp3' },
   { id: 'champagne', letter: 'A', src: 'http://sfxcontent.s3.amazonaws.com/soundfx/ChampagnePopPour.mp3' },
   { id: 'turkey', letter: 'S', src: 'http://courses.cs.vt.edu/~cs1004/turkeyGobble.mp3' },
-  { id: 'waterfall', letter: 'D', src: 'http://members.home.nl/sodejuu/index/TEMP/MP3%20pink%20noise.mp3' },
-  { id: 'splash', letter: 'Z', src: 'http://tteacher.net/Sound/Bruitages/plongeon-SF.mp3' },
-  { id: 'stream', letter: 'X', src: 'http://dight310.byu.edu/media/audio/FreeLoops.com/2/2/Brook%20Sound%20Effect-23172-Free-Loops.com.mp3' },
-  { id: 'ocean', letter: 'C', src:'http://www.mp3item.com/soundeffects/seawave03.wav' },
+  { id: 'party horn', letter: 'D', src: 'http://dight310.byu.edu/media/audio/FreeLoops.com/5/5/Party%20Horn.wav-22854-Free-Loops.com.mp3' },
+  { id: 'waterfall', letter: 'Z', src: 'http://csfiles.maniapc.org/cs/sound/ambience/waterfall1.wav' },
+  { id: 'rain', letter: 'X', src: 'http://msh38.ivyro.net/bookphotoshopdata2/rain03.wav' },
+  { id: 'stream', letter: 'C', src:'http://koo.corpus.cam.ac.uk/naturesound/waves/riviere3.wav' },
 ];
 
 class DrumPad extends React.Component {
@@ -42,7 +42,7 @@ class DrumPad extends React.Component {
   render() {
     return (
       <div
-        className='drum-pad'
+        className="drum-pad"
         id={this.props.id}
         onClick={this.handleClick}
        >
@@ -50,8 +50,9 @@ class DrumPad extends React.Component {
         <audio
           src={this.props.src}
           id={this.props.letter}
-          className='clip'
-          ref={ref => this.audio = ref}></audio>
+          className="clip"
+          ref={ref => this.audio = ref}>
+        </audio>
       </div>
     )
   }
@@ -61,7 +62,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      display: ''
+      display: ""
     }
   }
 
@@ -70,16 +71,20 @@ class App extends React.Component {
   render() {
     return (
       <div id="drum-machine">
-        <div id="display">{this.state.display}</div>
-        <div id="drum-pads">
-          {data.map(d => (
-          <DrumPad
-            id={d.id}
-            letter={d.letter}
-            src={d.src}
-            handleDisplay={this.handleDisplay}
-            />
-          ))}
+        <div class="container">
+          <div class="row">
+            <div id="display">{this.state.display}</div>
+              <div id="drum-pads">
+                {sounds.map(s => (
+                <DrumPad
+                  id={s.id}
+                  letter={s.letter}
+                  src={s.src}
+                  handleDisplay={this.handleDisplay}
+                  />
+                ))}
+              </div>
+          </div>
         </div>
       </div>
     )
