@@ -19,28 +19,46 @@ header p {
 }
 
 /* App styles */
+#root {
+  height: 500px;
+  padding: 50px 0;
+}
+
 #display {
-  border: 2px solid #333;
+  border: 5px solid #333;
   width: 100%;
   padding: 80px 0;
-  font-size: 25px;
+  font-size: 30px;
   text-align: center;
   color: #333;
+  text-transform: uppercase;
 }
 
 #drum-pads {
   width: 100%;
   display: flex;
-  margin-top: 15px;
-  padding-left: 15px;
+  margin-top: 20px;
 }
 
 .drum-pad {
-  border: 1px solid black;
-  height: 20vh;
-  width: 20vh;
+  border: 5px solid #333;
+  height: 135px;
+  width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 1vw;
+  padding: 45px 43px;
+  margin-right: 19px;
+  background-color: #333;
+}
+
+.drum-pad p {
+  font-size: 20px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+/* Footer */
+footer {
+  padding: 25px;
+  color: #333;
+  font-size: 16px;
 }
