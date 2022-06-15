@@ -1,5 +1,14 @@
-# Free Code Camp Drum Machine
-Click the drum pad elements to play different sounds. Made with HTML, CSS, Bootstrap and ReactJS.
+# Drum Machine
+freeCodeCamp Frontend Libraries project. Drum Machine.
+
+## Dependencies 
+* HTML
+* CSS
+* Bootstrap
+* React
+
+## Instructions 
+Clone this repo or download the zip file. Run ```npm start``` to start the app.
 
 ## Contributions
 This repository is based on starter code from the create-react-app and Ben Brooke's Drum Machine tutorial. Therefore. I will not be accepting any pull requests.
@@ -8,4 +17,4 @@ This repository is based on starter code from the create-react-app and Ben Brook
 * Ben Brooke
 * ReactJS
 * Bootstrap
-* Free Code Camp
+* freeCodeCamp
