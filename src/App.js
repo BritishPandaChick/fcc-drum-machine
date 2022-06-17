@@ -5,7 +5,7 @@ function App() {
   const drumPads = [
     {
       keyCode: 81,
-      text: 'Q',
+      text: "Q",
       src: 'http://dight310.byu.edu/media/audio/FreeLoops.com/2/2/Christmas%20Bells%20Loop-18474-Free-Loops.com.mp3',
     },
     {
@@ -50,12 +50,31 @@ function App() {
     },
   ];
 
+  function playSound(selector) {
+    const audio = document.getElementById(selector);
+    audio.play();
+  }
+
   return (
     <div className="App">
       <div id="drum-machine">
         <div id="display"></div>
-        //Setup the drum pads
-        {drumPads.map((drumPad) => <div className="drum-pad" id={drumPad.text}>{drumPad.text}</div>)}
+        <div className="drum-pads">
+          {drumPads.map((drumPad) => ( //Sets up drum pads
+            <div onClick={() => {
+              playSound(drumPad.text);
+            }}
+              className="drum-pad"
+              id={drumPad.src}>
+              {drumPad.text}
+              <audio
+                src={drumPad.src}
+                className="clip"
+                id={drumPad.text}
+              ></audio>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
