@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect } from "react";
 import './App.css';
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
     {
       keyCode: 81,
       text: "Q",
-      src: 'http://dight310.byu.edu/media/audio/FreeLoops.com/2/2/Christmas%20Bells%20Loop-18474-Free-Loops.com.mp3',
+      src: "http://dight310.byu.edu/media/audio/FreeLoops.com/2/2/Christmas%20Bells%20Loop-18474-Free-Loops.com.mp3",
     },
     {
       keyCode: 87,
@@ -43,7 +43,7 @@ function App() {
     {
       keyCode: 90,
       text: "Z",
-      src: "https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3",
+      src: "http://csfiles.maniapc.org/cs/sound/ambience/waterfall1.wav",
     },
     {
       keyCode: 88,
@@ -51,14 +51,16 @@ function App() {
       src: "http://msh38.ivyro.net/bookphotoshopdata2/rain03.wav",
     },
     {
-      keyCode: 87,
+      keyCode: 67,
       text: "C",
       src: "http://koo.corpus.cam.ac.uk/naturesound/waves/riviere3.wav",
     },
   ];
 
+  //Plays audio sounds
   function playSound(selector) {
     const audio = document.getElementById(selector);
+    console.log(audio);
     audio.play();
   }
 
@@ -75,11 +77,12 @@ function App() {
               }}
               className="drum-pad"
               id={drumPad.src}
-            >{drumPad.text}
+            >
+              {drumPad.text}
               <audio
-                src={drumPad.src}
                 className="clip"
                 id={drumPad.text}
+                src={drumPad.src}
               ></audio>
             </div>
           ))}
