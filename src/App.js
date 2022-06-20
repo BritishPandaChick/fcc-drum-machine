@@ -1,6 +1,13 @@
+import { useEffect } from 'react';
 import './App.css';
 
 function App() {
+  useEffect(() => {
+    document.addEventListener('keydown', (event) => {
+      playSound(event.key.toUpperCase());
+    });
+  }, []);
+
   //Array of keycodes and sounds
   const drumPads = [
     {
@@ -36,7 +43,7 @@ function App() {
     {
       keyCode: 90,
       text: "Z",
-      src: "http://csfiles.maniapc.org/cs/sound/ambience/waterfall1.wav",
+      src: "https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3",
     },
     {
       keyCode: 88,
@@ -61,12 +68,14 @@ function App() {
         <div id="display"></div>
         <div className="drum-pads">
           {drumPads.map((drumPad) => ( //Sets up drum pads
-            <div onClick={() => {
-              playSound(drumPad.text);
-            }}
+            <div
+              key={drumPad.src}
+              onClick={() => {
+                playSound(drumPad.text);
+              }}
               className="drum-pad"
-              id={drumPad.src}>
-              {drumPad.text}
+              id={drumPad.src}
+            >{drumPad.text}
               <audio
                 src={drumPad.src}
                 className="clip"
@@ -78,6 +87,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export default App;
