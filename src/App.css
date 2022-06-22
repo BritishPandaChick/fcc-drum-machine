@@ -25,11 +25,44 @@ header p {
 
 /*=== Drum Machine ===*/
 #drum-machine {
-    border: 2px solid red;
-    display: grid;
-    grid-template-rows: 50% 50%;
+    height: 50%;
+    padding: 50px 0;
+}
+
+#display {
+    border: 5px solid #595457;
+    width: 100%;
+    padding: 80px 0;
+    font-size: 30px;
+    text-align: center;
+    color: #333;
+    text-transform: uppercase;
 }
 
 .drum-pads {
-    display: inline-block;
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+}
+
+.drum-pad {
+    border: 5px solid #595457;
+    height: 135px;
+    width: 100%;
+    display: flex;
+    padding: 47px 43px;
+    margin-right: 19px;
+    background-color: #595457;
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFF;
+}
+
+/*== Footer ==*/
+footer {
+    padding: 5px;
+    font-size: 16px;
+    background-color: #710627;
+    color: #fff;
+    margin-top: 15px;
 }
