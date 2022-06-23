@@ -4,6 +4,7 @@ import './App.css';
 function App() {
   const [activeKey, setActiveKey] = useState('');
 
+  // When key is pressed, audio element is triggered
   useEffect(() => {
     document.addEventListener('keydown', (event) => {
       playSound(event.key.toUpperCase());
@@ -64,6 +65,7 @@ function App() {
     const audio = document.getElementById(selector);
     console.log(audio);
     audio.play();
+    // string describing audio clip displayed in the display box
     setActiveKey(selector);
   }
 
@@ -71,6 +73,7 @@ function App() {
     <div className="App">
       <div id="drum-machine" className="container">
         <div id="display">{activeKey}</div>
+
         <div className="row">
           <div className="drum-pads">
             {drumPads.map((drumPad) => ( //Sets up drum pads
