@@ -11,7 +11,7 @@ freeCodeCamp Frontend Libraries project. Drum Machine.
 Clone this repo or download the zip file. Run ```npm start``` to start the app. Click the drum pad elements to start playing sounds.
 
 ## Contributions
-This repository is based on starter code from the create-react-app and Ben Brooke's Drum Machine tutorial. Therefore. I will not be accepting any pull requests.
+This repository is based on starter code from the create-react-app and Ben Brooke's Drum Machine tutorial, and K-dev's drum machine tutorial. Therefore. I will not be accepting any pull requests.
 
 ## Acknowledgements
 * Dylan Israel 
